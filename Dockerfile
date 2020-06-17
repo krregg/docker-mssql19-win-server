@@ -21,7 +21,7 @@ ADD ./start.ps1 /
 WORKDIR /
 ENV SA_PASSWORD = "Password02!"
 ENV ACCEPT_EULA = "Y"
-ENV attach_dbs = "[]"
+ENV attach_dbs = "[{'dbName':'db','dbFiles': ['c:/data/source/BACKUP/db_Data.MDF', 'c:/data/source/BACKUP/db_Log.LDF']}]"
 
 # run start.ps1
 CMD ./start.ps1 -ACCEPT_EULA "Y" -Verbose
